@@ -1,0 +1,252 @@
+* {
+    ---color-text-link: #fff;
+    ---height-link: 5.5rem;
+    ---borda-arredondada-link: 1.2rem;
+    ---color-principal: #f79;
+    ---color-secundaria: #2cf;
+    ---borda-cor:  rgba(0, 0, 0, 0.15);
+    ---font-principal: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(---font-principal);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.5rem;
+    margin-top: 5rem;
+}
+
+.container-imagem {
+    padding: 5.7rem 4.4rem;
+    text-align: center;
+    width: 40%;
+}
+
+aside img {
+    width: 70%;
+}
+
+.titulo {
+    font-size: 9rem;
+    line-height: 75px;
+    font-weight: 500;
+}
+
+.container-principal {
+    padding: 5.7rem 4.4rem;
+    gap: .5rem;
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    position: relative;
+}
+
+main h2 {
+    font-size: 3.5rem;
+    text-align: left;
+    max-width: 430px;
+    font-weight: 500;
+}
+
+.container-anchor a {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem 0rem;
+    font-size: 2.4rem;
+    max-width: 450px;
+    margin: 5.4rem 0rem;
+    height: var(---height-link);
+    justify-content: center;
+    color: var(---color-text-link);
+    border-radius: var(---borda-arredondada-link);
+    text-decoration: none;
+}
+
+.container-anchor a:first-child {
+    background-color: var(---color-secundaria);
+}
+
+.container-anchor a:nth-child(2) {
+    background-color: var(---color-principal);
+
+}
+
+a {
+    text-align: center;
+}
+
+.palavra-destaque {
+    color: var(---color-principal);
+}
+
+.rodape {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem 0;
+}
+
+.rodape p {
+    font-size: 1.6rem;
+}
+
+.rodape a {
+    color: #000;
+    font-size: 1.4rem;
+    display: block;
+}
+
+main .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+main .section-header i {
+    color: var(---color-principal);
+    font-size: 2rem;
+}
+
+main form {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main form label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+main form :is(input, select) {
+    width: 489px;
+    height: 5.5rem;
+    border: 0.1rem solid var(---borda-cor);
+    border-radius: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+main form select {
+    appearance: none;
+}
+
+main form .div-select {
+    position: relative;
+}
+
+main form .div-select::after {
+    cursor: pointer;
+    color: var(---color-secundaria);
+    top: 4.6rem;
+    right: 4rem;
+    font-size: 2rem;
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+}
+
+form [data-botao="button"] .botao-cadastrar {
+    cursor: pointer;
+    font-size: 2.4rem;
+    width: 45rem;
+    margin: 5.4rem 0rem;
+    height: var(---height-link);
+    justify-content: center;
+    color: var(---color-text-link);
+    border-radius: var(---borda-arredondada-link);
+    text-decoration: none;
+    background-color: var(---color-secundaria);
+    border: none;
+}
+
+main form .points {
+    position: relative;
+}
+
+main form input + button{
+    position: absolute;
+    right: -1rem;
+    top: calc(2.7rem + 2rem);
+    background-color: transparent;
+    border: none;
+    color: var(---color-secundaria);
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+main form .section-paragrafo {
+    text-align: center;
+    line-height: 3rem;
+}
+
+.section-paragrafo .paragrafo-divisor {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-paragrafo .paragrafo-sugestor {
+    font-size: 1.8rem;
+    color: var(---color-principal);
+}
+
+.content-entidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.container-entidade {
+    border: 2px solid var(---color-secundaria);
+    width: 55%;
+}
+
+[data-table="tabela"] {
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+[data-table="tabela"] a {
+    text-decoration: none;
+    color: transparent;
+    display: block;
+    transition: 1s ease-in-out;
+}
+
+[data-table="tabela"] a:hover {
+    color: var(---color-principal);
+}
+
+/* [data-table="tabela"] tr {
+    border-bottom: 2px solid var(---borda-cor);
+} */
+
+[data-table="tabela"] tr td {
+    padding: 1rem 0;
+}
+
+[data-table="tabela"] tr td:nth-child(2) {
+    color: var(---color-secundaria);
+    border: 1px solid var(---color-secundaria);
+    border-radius: 1.2rem;
+    text-transform: lowercase;
+    text-align: center;
+}
